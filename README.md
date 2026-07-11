@@ -2,7 +2,7 @@
 
 [![Python](https://img.shields.io/badge/python-3.10-3776AB?logo=python&logoColor=white)](https://www.python.org) [![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
 
-선박이 입항한 뒤 접안까지 기다리는 시간을 예측한 HD현대 AI Challenge 기록입니다. 예선에서 대기시간을 회귀로 예측해 2위에 올랐고, 본선에서는 시계열 신호 데이터로 예측을 이어 6위를 기록했습니다.
+선박이 입항한 뒤 접안까지 기다리는 시간을 예측한 HD현대 AI Challenge 기록입니다. 예선에서 대기시간을 회귀로 예측해 2위에 올랐고, 본선에서는 시계열 신호 데이터를 다뤄 6위를 기록했습니다.
 
 ## 개요
 
@@ -18,7 +18,7 @@
 
 ## 접근
 
-- 예선에서는 결측 처리, 시간 파생 변수, target encoding, XGBoost·CatBoost 앙상블을 구성했습니다.
+- 예선에서는 결측 처리와 시간 파생 변수, target encoding을 적용하고 XGBoost·CatBoost 앙상블을 구성했습니다.
 - `DIST == 0` 같은 특수 케이스를 후처리로 보정했습니다.
 - 본선에서는 시계열 신호 파일을 trial 단위로 파싱하고 sliding window 피처를 만들었습니다.
 - LightGBM 예측을 ID 단위 백분위 집계와 반올림으로 제출 형식에 맞췄습니다.
